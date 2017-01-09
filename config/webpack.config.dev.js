@@ -111,7 +111,8 @@ module.exports = {
           /\.(js|jsx)$/,
           /\.css$/,
           /\.json$/,
-          /\.svg$/
+          /\.svg$/,
+          /\.md$/
         ],
         loader: 'url',
         query: {
@@ -154,6 +155,12 @@ module.exports = {
         query: {
           name: 'static/media/[name].[hash:8].[ext]'
         }
+      },
+      // Load Markdown files by converting them to JSON. It's then up to
+      // the consumer to render the result
+      {
+        test: /\.md$/,
+        loader: 'markdown-with-front-matter'
       }
     ]
   },
