@@ -1,5 +1,6 @@
 // @flow
 import React from 'react';
+import { Link } from 'react-router';
 
 const Header = () => (
   <header>
@@ -20,10 +21,10 @@ const Header = () => (
 
         <div className="hon_top_menu_cont">
           <ul className="hon_top_menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/portfolio">Portfolio</Link></li>
           </ul>
         </div>
 
