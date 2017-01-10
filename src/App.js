@@ -11,16 +11,17 @@ import Footer from './Footer';
 import Header from './Header';
 import SocialIcons from './SocialIcons';
 
+import './app.css';
+
 const App = () => (
   <BrowserRouter>
     <div className="hon_middle_titles hon_image_bck hon_material hon_footer_fix" style={{backgroundColor: 'white'}}>
 
       <SocialIcons />
 
-      {/* Page */}
       <div className="hon_page hon_page_margin hon_page_fixed" id="hon_page">
 
-        {/* To Top */}
+        {/* Jump to top link */}
         <a href="#hon_page" className="hon_top ti ti-angle-up hon_go"/>
 
         <Header />
