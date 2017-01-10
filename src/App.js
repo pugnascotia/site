@@ -9,7 +9,8 @@ import Home from './Home';
 
 import Footer from './Footer';
 import Header from './Header';
-import SocialIcons from './SocialIcons';
+import SocialIcons from './SocialIcons'
+import scrollToTop from './ScrollToTop';
 
 import './app.css';
 
@@ -19,16 +20,15 @@ const App = () => (
 
       <SocialIcons />
 
-      <div className="hon_page hon_page_margin hon_page_fixed" id="hon_page">
+      <div className="hon_page hon_page_fixed">
 
-        {/* Jump to top link */}
-        <a href="#hon_page" className="hon_top ti ti-angle-up hon_go"/>
+        <a className="hon_top ti ti-angle-up hon_go" onClick={() => window.scrollTo(0,0) }/>
 
         <Header />
 
-        <Match exactly pattern="/" component={Home} />
-        <Match pattern="/about" component={About} />
-        <Match pattern="/blog" component={Blog} />
+        <Match exactly pattern="/" component={scrollToTop(Home)} />
+        <Match pattern="/about" component={scrollToTop(About)} />
+        <Match pattern="/blog" component={scrollToTop(Blog)} />
 
         {/* If none of those match, then a sibling `Miss` will render. */}
         {/*<Miss component={NoMatch}/>*/}
