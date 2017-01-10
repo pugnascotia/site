@@ -1,25 +1,25 @@
 // @flow
 import React from 'react';
-
 import { Match } from 'react-router';
 
 import Post from './Post';
 
-// $FlowFixMe it doesn't know about Webpack extra's on require()
-const markdownRequire = require.context('./posts', /* useSubdirectories = */ true, /* regExp = */ /\.md$/);
+import type { PostType, RecentPostType } from './types';
 
-const allPosts = markdownRequire.keys();
-const allPostIds = allPosts.map(x => x.replace(new RegExp('^\\.\\/'), '').replace(/\.md$/, ''));
+// $FlowFixMe it doesn't know about Webpack extras on require()
+const markdownRequire : (string) => PostType = require.context('./posts', /* useSubdirectories = */ true, /* regExp = */ /\.md$/);
 
-const findLatestPost = () => {
-  const mostRecentPost = allPosts
-    .map(id => { const data = markdownRequire(id); return { id, date: data.date }; })
-    .reduce((cur, next) => cur.date.localeCompare(next.date) < 0 ? next : cur);
+const allPosts : PostType[] = markdownRequire.keys()
+  .map(id => { const data = markdownRequire(id); data.id = id; return data; })
+  .sort((a, b) => a.date.localeCompare(b.date) < 0);
 
-  return mostRecentPost.id;
-};
+const latestPost = allPosts[0].id;
 
-const latestPost = findLatestPost();
+const recentPosts : RecentPostType[] = allPosts.slice(0, 5).map(post => ({
+  id: post.id,
+  title: post.title,
+  date: post.date
+}));
 
 type Props = {
   pathname: string
@@ -28,15 +28,18 @@ type Props = {
 const Blog = ({ pathname }: Props) => (
   <div>
 
+    <Match pattern={pathname} exactly render={() =>
+      <Post post={markdownRequire(latestPost)} recentPosts={recentPosts} /> }/>
+
     {/* HACK to match trailing slash - should I use a redirect? */}
-    <Match pattern={pathname} exactly render={() => <Post {...markdownRequire(latestPost)} /> }/>
-    <Match pattern={`${pathname}/`} exactly render={() => <Post {...markdownRequire(latestPost)} /> }/>
+    <Match pattern={`${pathname}/`} exactly render={() =>
+      <Post post={markdownRequire(latestPost)} recentPosts={recentPosts} /> }/>
 
     <Match pattern={`${pathname}/:postId`} render={({ params }) => {
-      if (allPostIds.includes(params.postId)) {
-        return <Post {...markdownRequire(`./${params.postId}.md`)} />
+      try {
+        return <Post post={markdownRequire(`./${params.postId}.md`)} recentPosts={recentPosts} />
       }
-      else {
+      catch (e) {
         return <h1>I could not find your post. 404, dude.</h1>;
       }
     }}/>

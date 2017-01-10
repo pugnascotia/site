@@ -8,14 +8,14 @@ import Row from 'react-bootstrap/lib/Row';
 import Sidebar from './Sidebar';
 import Header from './Header';
 
+import type { PostType, RecentPostType } from './types';
+
 type Props = {
-  title: string,
-  subTitle?: string,
-  __content: string,
-  date: string
+  post: PostType,
+  recentPosts: RecentPostType[]
 };
 
-const Post = ({ title, subTitle, __content, date}: Props) => {
+const Post = ({ post: { title, subTitle, __content, date }, recentPosts}: Props) => {
 
   const parsedDate = new Date(date);
 
@@ -136,7 +136,7 @@ const Post = ({ title, subTitle, __content, date}: Props) => {
 
               </Col>
 
-              <Sidebar />
+              <Sidebar recentPosts={recentPosts} />
 
             </Row>
           </Grid>

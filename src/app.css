@@ -1,3 +1,7 @@
 a {
     text-decoration: underline;
 }
+
+nav a, a.btn, a.hon_go {
+    text-decoration: none;
+}

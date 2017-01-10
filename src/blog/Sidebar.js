@@ -2,7 +2,13 @@
 import React from 'react';
 import Col from 'react-bootstrap/lib/Col';
 
-const Sidebar = () => (
+import type { RecentPostType } from './types';
+
+type Props = {
+  recentPosts: RecentPostType[]
+};
+
+const Sidebar = ({ recentPosts }: Props) => (
   <Col md={3} mdPull={8} xsHidden smHidden>
 
     <div className="widget">
@@ -41,18 +47,12 @@ const Sidebar = () => (
     <div className="widget">
       <h6 className="title">Recent Posts</h6>
       <ul className="list-unstyled recent-posts">
-        <li>
-          <a href="#">Ut enim ad minim veniam, quis nostrud</a>
-          <span className="date">November 10, 2016</span>
-        </li>
-        <li>
-          <a href="#">Excepteur sint occaecat</a>
-          <span className="date">November 08, 2016</span>
-        </li>
-        <li>
-          <a href="#">Duis aute irure dolor in reprehenderit in voluptate velit</a>
-          <span className="date">November 05, 2016</span>
-        </li>
+        {recentPosts.map(post => (
+          <li key={post.id}>
+            <a href="#">{post.title}</a>
+            <span className="date">{(new Date(post.date)).toUTCString()}</span>
+          </li>
+        ))}
       </ul>
     </div>
 
