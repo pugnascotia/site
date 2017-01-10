@@ -251,56 +251,6 @@ const About = () => (
       </section>
       {/* section end  */}
 
-
-
-
-
-      {/* section  */}
-      <section className="hon_section hon_section_sml_padding hon_image_bck" style={{backgroundColor: '#f2f2f2'}}>
-        <div className="container">
-
-          {/* boxes  */}
-          <div className="hon_icon_boxes row text-center">
-
-            {/* animation  */}
-            <div data-animation="animation_blocks" data-bottom="@class:noactive" data--100-bottom="@class:active">
-
-
-              {/* item  */}
-            <div className="hon_icon_box col-md-4 col-sm-4">
-              <i className="ti ti-map-alt"/>
-              <div className="hon_icon_box_content">
-                <h4><b>ADRESS:</b> 245 Quigley Blvd, Ste K</h4>
-              </div>
-            </div>
-
-              {/* item  */}
-            <div className="hon_icon_box col-md-4 col-sm-4">
-              <i className="ti ti-email"/>
-              <div className="hon_icon_box_content">
-                <h4><b>E-MAIL:</b> <a href="mailto:support@hondo.pro">support@hondo.pro</a></h4>
-              </div>
-            </div>
-
-              {/* item  */}
-            <div className="hon_icon_box col-md-4 col-sm-4">
-              <i className="ti ti-mobile"/>
-              <div className="hon_icon_box_content">
-                <h4><b>PHONE:</b> +61 3 8376 6284</h4>
-              </div>
-            </div>
-
-            </div>
-            {/* animation end  */}
-
-          </div>
-          {/* boxes end  */}
-
-        </div>
-        {/* container end  */}
-      </section>
-      {/* section end  */}
-
     </section>
     {/* section end  */}
 

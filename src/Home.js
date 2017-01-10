@@ -1,5 +1,5 @@
 // @flow
-import React, { Component } from 'react';
+import React from 'react';
 
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
@@ -29,8 +29,8 @@ const App = () => (
   <div>
 
     {/* Slider */}
-    <div className="hon_slider hon_image_bck hon_fixed hon_wht_txt" data-stellar-background-ratio="0.2" data-image="http://placehold.it/1400x900">
-      <div className="hon_over" style={{backgroundColor: '#000'}} data-opacity="0.2" data-0="opacity:0.1;" data--400-bottom="opacity:0;"></div>
+    <div className="hon_slider hon_image_bck hon_fixed hon_wht_txt" data-stellar-background-ratio="0.2" style={{backgroundImage: 'url(http://placehold.it/1400x900)'}}>
+      <div className="hon_over" style={{backgroundColor: 'rgba(0,0,0,0.2)'}} data-0="opacity:0.1;" data--400-bottom="opacity:0;"></div>
 
       <div className="container">
 
@@ -167,7 +167,7 @@ const App = () => (
 
 
       {/* section */}
-      <section className="hon_section hon_section_sml_padding bg" data-img-bg="http://placehold.it/1400x900">
+      <section className="hon_section hon_section_sml_padding bg" style={{backgroundImage: 'url(http://placehold.it/1400x900)'}}>
 
         <div className="row hon_auto_height hon_wht_txt">
 
@@ -187,7 +187,7 @@ const App = () => (
       {/* section end */}
 
       {/* section */}
-      <section className="hon_section hon_section_sml_padding hon_image_bck hon_wht_txt bg" data-img-bg="http://placehold.it/1400x900">
+      <section className="hon_section hon_section_sml_padding hon_image_bck hon_wht_txt bg" style={{backgroundImage: 'url(http://placehold.it/1400x900)'}}>
 
         <div className="row hon_auto_height">
 
@@ -256,7 +256,9 @@ const App = () => (
         <div className="container text-center">
 
           <h2>My Works</h2>
-          <h3>We are a company of promise and possibilities. Each day represents a fresh oppurtunity to share Our Vision. Joining strategy with creative is what we do best as our goal is to create tools that engage your audience and entice them to act.</h3>
+          <h3>We are a company of promise and possibilities. Each day represents a fresh oppurtunity to share Our Vision.
+           Joining strategy with creative is what we do best as our goal is to create tools that engage
+            your audience and entice them to act.</h3>
 
 
           {/* icon boxes */}
@@ -272,8 +274,8 @@ const App = () => (
                   <h3>Hondo</h3>
                   <span className="hon_port_subtitle">Design / Modern / Nature</span>
                   <span className="hon_gravity_icons">
-                                            <a href="http://placehold.it/600x400" className="lightbox"><i className="ti ti-plus"/></a>
-                                        </span>
+                    <a href="http://placehold.it/600x400" className="lightbox"><i className="ti ti-plus"/></a>
+                  </span>
                 </div>
 
               </div>
@@ -288,8 +290,8 @@ const App = () => (
                   <h3>Business</h3>
                   <span className="hon_port_subtitle">Design / Modern / Nature</span>
                   <span className="hon_gravity_icons">
-                                            <a href="http://placehold.it/600x400" className="lightbox"><i className="ti ti-plus"/></a>
-                                        </span>
+                    <a href="http://placehold.it/600x400" className="lightbox"><i className="ti ti-plus"/></a>
+                  </span>
                 </div>
 
               </div>
@@ -305,8 +307,8 @@ const App = () => (
                   <h3>World</h3>
                   <span className="hon_port_subtitle">Design / Modern / Nature</span>
                   <span className="hon_gravity_icons">
-                                            <a href="http://placehold.it/600x400" className="lightbox"><i className="ti ti-plus"/></a>
-                                        </span>
+                    <a href="http://placehold.it/600x400" className="lightbox"><i className="ti ti-plus"/></a>
+                  </span>
                 </div>
 
 
@@ -323,8 +325,8 @@ const App = () => (
                   <h3>Welcome to Hondo</h3>
                   <span className="hon_port_subtitle">Design / Modern / Nature</span>
                   <span className="hon_gravity_icons">
-                                            <a href="http://placehold.it/600x400" className="lightbox"><i className="ti ti-plus"/></a>
-                                        </span>
+                    <a href="http://placehold.it/600x400" className="lightbox"><i className="ti ti-plus"/></a>
+                  </span>
                 </div>
 
               </div>
@@ -339,7 +341,6 @@ const App = () => (
         {/* container end */}
 
       </section>
-      {/* section end */}
 
 
       {/* section */}
@@ -354,7 +355,7 @@ const App = () => (
             </div>
           </div>
 
-          <div className="col-md-4 hidden-sm hon_image_bck hon_fixed"  data-stellar-background-ratio="0.2" data-image="http://placehold.it/1400x900">
+          <div className="col-md-4 hidden-sm hon_image_bck hon_fixed"  data-stellar-background-ratio="0.2" style={{backgroundImage: 'url(http://placehold.it/1400x900)'}}>
 
           </div>
           <div className="col-md-4 hon_image_bck hon_wht_txt" style={{backgroundColor: '#999'}}>
@@ -431,60 +432,6 @@ const App = () => (
         {/* container end */}
 
       </section>
-      {/* section end */}
-
-
-
-      {/* section */}
-      <section className="hon_section hon_last_section hon_image_bck hon_fixed" data-stellar-background-ratio="0.2" data-image="http://placehold.it/1400x900">
-
-        <div className="container">
-          <div className="row">
-
-            <div className="col-md-6 col-md-offset-6">
-
-              {/* animation */}
-              <div data-animation="animation_blocks" data-bottom="@class:noactive" data--100-bottom="@class:active">
-
-
-              <h2>Contact Me</h2>
-              <h3>Cupiditate neque libero porro nulla.</h3>
-              <form id="hon_form" className="hon_form">
-                <Row >
-                  <Col md={6}>
-                    <input type="text" className="form-control" placeholder="Name" name="name" required />
-                  </Col>
-                  <Col md={6}>
-                    <input type="text" className="form-control" placeholder="Country" name="country" />
-                  </Col>
-                </Row>
-
-                <Row>
-                  <Col md={6}>
-                    <input type="text" className="form-control" placeholder="E-mail" name="email" required />
-                  </Col>
-                  <Col md={6}>
-                    <input type="text" className="form-control" placeholder="Phone" name="phone" required />
-                  </Col>
-                </Row>
-
-                <Row>
-                  <Col md={12}>
-                    <textarea className="form-control" placeholder="Message" name="message"/>
-                    <input type="submit" className="btn" value="Send" />
-                  </Col>
-
-                </Row>
-              </form>
-              </div>
-              {/* anmation end */}
-            </div>
-          </div>
-        </div>
-
-
-      </section>
-      {/* section end */}
 
     </section>
   </div>

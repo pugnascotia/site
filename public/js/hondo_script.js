@@ -486,13 +486,10 @@
 
 
 	/* Submenu */
-	console.log('twat');
  	$('.hon_parent').on({
 		mouseenter:function(){
-			console.log('arse');
 			$(this).find('ul').stop().fadeIn(500);
 		},mouseleave:function(){
-      console.log('arse 2');
 			$(this).find('ul').stop().fadeOut(500);
 		}
 	});
