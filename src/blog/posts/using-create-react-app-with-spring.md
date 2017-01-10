@@ -2,8 +2,7 @@
 title: Using create-react-app with Spring Boot
 date: 2016-12-08
 layout: Post
-# Example of a top image
-# hero: https://farm8.staticflickr.com/7479/15669216853_aa8e70eae1_o.jpg
+hero: https://c7.staticflickr.com/4/3512/5791860950_b7af3cfdc2_b.jpg
 ---
 
 *This post first appeared on [Black Pepper

@@ -10,7 +10,7 @@ import type { PostType, RecentPostType } from './types';
 const markdownRequire : (string) => PostType = require.context('./posts', /* useSubdirectories = */ true, /* regExp = */ /\.md$/);
 
 const allPosts : PostType[] = markdownRequire.keys()
-  .map(id => { const data = markdownRequire(id); data.id = id; return data; })
+  .map(id => ({ id, ...markdownRequire(id) }))
   .sort((a, b) => a.date.localeCompare(b.date) < 0);
 
 const latestPost = allPosts[0].id;
@@ -31,16 +31,12 @@ const Blog = ({ pathname }: Props) => (
     <Match pattern={pathname} exactly render={() =>
       <Post post={markdownRequire(latestPost)} recentPosts={recentPosts} /> }/>
 
-    {/* HACK to match trailing slash - should I use a redirect? */}
-    <Match pattern={`${pathname}/`} exactly render={() =>
-      <Post post={markdownRequire(latestPost)} recentPosts={recentPosts} /> }/>
-
     <Match pattern={`${pathname}/:postId`} render={({ params }) => {
       try {
         return <Post post={markdownRequire(`./${params.postId}.md`)} recentPosts={recentPosts} />
       }
       catch (e) {
-        return <h1>I could not find your post. 404, dude.</h1>;
+        return <h1>I could not find that post. 404, dude.</h1>;
       }
     }}/>
 

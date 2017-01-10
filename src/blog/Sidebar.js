@@ -4,6 +4,8 @@ import Col from 'react-bootstrap/lib/Col';
 
 import type { RecentPostType } from './types';
 
+import { formatDate } from '../DateUtils';
+
 type Props = {
   recentPosts: RecentPostType[]
 };
@@ -11,6 +13,7 @@ type Props = {
 const Sidebar = ({ recentPosts }: Props) => (
   <Col md={3} mdPull={8} xsHidden smHidden>
 
+    {/*
     <div className="widget">
       <h6 className="title">About The Author</h6>
       <p>
@@ -43,6 +46,7 @@ const Sidebar = ({ recentPosts }: Props) => (
         </li>
       </ul>
     </div>
+    */}
 
     <div className="widget">
       <h6 className="title">Recent Posts</h6>
@@ -50,13 +54,13 @@ const Sidebar = ({ recentPosts }: Props) => (
         {recentPosts.map(post => (
           <li key={post.id}>
             <a href="#">{post.title}</a>
-            <span className="date">{(new Date(post.date)).toUTCString()}</span>
+            <span className="date">{formatDate(post.date)}</span>
           </li>
         ))}
       </ul>
     </div>
 
-
+    {/*
     <div className="widget bg-secondary p24">
       <h6 className="title">Subscribe Now</h6>
       <p>
@@ -67,6 +71,7 @@ const Sidebar = ({ recentPosts }: Props) => (
         <input type="submit" className="btn btn-default no-margin" value="Subscribe" />
       </form>
     </div>
+    */}
 
   </Col>
 );

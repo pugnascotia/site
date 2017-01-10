@@ -1,5 +1,7 @@
 // @flow
 
+export type url = string;
+
 export type RecentPostType = {
   id: string,
   title: string,
@@ -11,5 +13,6 @@ export type PostType = {
   title: string,
   subTitle?: string,
   __content: string,
-  date: string
+  date: string,
+  hero?: url
 };
