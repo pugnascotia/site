@@ -5,3 +5,16 @@ a {
 nav a, a.btn, a.hon_go {
     text-decoration: none;
 }
+
+h2 {
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+body {
+    font-size: 18px;
+}

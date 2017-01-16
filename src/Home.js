@@ -26,7 +26,7 @@ const Education = ({institution, outcome, dark, children}) => (
 );
 
 const App = () => (
-  <div>
+  <div className="hon_middle_titles">
 
     {/* Slider */}
     <div className="hon_slider hon_image_bck hon_fixed hon_wht_txt" data-stellar-background-ratio="0.2" style={{backgroundImage: 'url(http://placehold.it/1400x900)'}}>

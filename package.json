@@ -47,17 +47,20 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
+    "file": "^0.2.2",
     "flow-bin": "^0.37.4",
     "markdown-with-front-matter-loader": "^0.1.0",
     "react": "^15.4.2",
     "react-addons-css-transition-group": "^15.4.2",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.2",
-    "react-router": "next"
+    "react-router": "next",
+    "yaml-front-matter": "^3.4.0"
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "blog": "node scripts/buildBlogInventory.js > src/blog/collection.json",
+    "build": "yarn run blog && node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "flow": "flow"
   },

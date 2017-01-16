@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import Col from 'react-bootstrap/lib/Col';
+import { Link } from 'react-router';
 
 import type { RecentPostType } from './types';
 
@@ -53,7 +54,7 @@ const Sidebar = ({ recentPosts }: Props) => (
       <ul className="list-unstyled recent-posts">
         {recentPosts.map(post => (
           <li key={post.id}>
-            <a href="#">{post.title}</a>
+            <Link to={'/blog/' + post.id}>{post.title}</Link>
             <span className="date">{formatDate(post.date)}</span>
           </li>
         ))}

@@ -6,6 +6,14 @@ export type RecentPostType = {
   id: string,
   title: string,
   date: string
+}
+
+export type PostMeta = {
+  id: string,
+  title: string,
+  subTitle?: string,
+  date: string,
+  hero?: url
 };
 
 export type PostType = {
