@@ -4,8 +4,8 @@ import React from 'react';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 
-import IconBox from './IconBox';
-import Metric from './Metric';
+import IconBox from '../components/IconBox';
+import Metric from '../components/Metric';
 
 const SkillBar = ({percentage, skill}) => (
   <div className="skill-bar skill-bar-thin">

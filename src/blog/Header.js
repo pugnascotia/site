@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/lib/Col';
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 
-import Overlay from '../Overlay';
+import Overlay from '../components/Overlay';
 
 import type { url } from './types';
 

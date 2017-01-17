@@ -3,14 +3,14 @@ import React from 'react';
 
 import { BrowserRouter, Match } from 'react-router';
 
-import About from './About';
+import About from './about';
 import Blog from './blog';
-import Home from './Home';
+import Home from './home';
 
-import Footer from './Footer';
-import Header from './Header';
-import SocialIcons from './SocialIcons'
-import scrollToTop from './ScrollToTop';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import SocialIcons from './components/SocialIcons'
+import scrollToTop from './components/ScrollToTop';
 
 import './app.css';
 
