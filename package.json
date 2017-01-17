@@ -47,6 +47,7 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
+    "bundle-loader": "^0.5.4",
     "file": "^0.2.2",
     "flow-bin": "^0.37.4",
     "markdown-with-front-matter-loader": "^0.1.0",
