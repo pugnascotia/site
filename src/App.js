@@ -16,7 +16,7 @@ import './app.css';
 
 const App = () => (
   <BrowserRouter>
-    <div className="hon_image_bck hon_material hon_footer_fix" style={{backgroundColor: 'white'}}>
+    <div className="hon_image_bck hon_footer_fix" style={{backgroundColor: 'white'}}>
 
       <SocialIcons />
 
