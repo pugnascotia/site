@@ -7,11 +7,11 @@ const asyncPost = (slug) => {
   return class extends React.Component {
     constructor(props) {
       super(props);
-      this.state = { props: null };
+      this.state = { post: null };
     }
 
     componentWillMount() {
-      if (!this.state) {
+      if (!this.state.post) {
         const waitForPost = require('./posts/' + slug + '.md');
         waitForPost((post) => this.setState({ post }));
       }
