@@ -168,7 +168,7 @@ module.exports = {
       // the consumer to render the result
       {
         test: /\.md$/,
-        loader: 'markdown-with-front-matter'
+        loader: 'bundle-loader?name=posts/[name]!markdown-with-front-matter'
       },
       // Pace's AMD code appears to be broken, so use the import-loader so force it to use CommonJS
       {
