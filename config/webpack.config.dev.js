@@ -79,7 +79,7 @@ module.exports = {
       'react-native': 'react-native-web'
     }
   },
-  
+
   module: {
     // First, run the linter.
     // It's important to do this before Babel processes the JS.
@@ -126,7 +126,7 @@ module.exports = {
         include: paths.appSrc,
         loader: 'babel',
         query: {
-          
+
           // This is a feature of `babel-loader` for webpack (not Babel itself).
           // It enables caching results in ./node_modules/.cache/babel-loader/
           // directory for faster rebuilds.
@@ -161,10 +161,15 @@ module.exports = {
       {
         test: /\.md$/,
         loader: 'markdown-with-front-matter'
+      },
+      // Pace's AMD code appears to be broken, so use the import-loader so force it to use CommonJS
+      {
+        test: require.resolve('pace-progress'),
+        loader: 'imports-loader?define=>false'
       }
     ]
   },
-  
+
   // We use PostCSS for autoprefixing only.
   postcss: function() {
     return [
