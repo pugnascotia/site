@@ -113,14 +113,8 @@ const About = () => (
         <Row>
 
           <Col md={8}>
-            <h1 className="hon_h1_title">About 2</h1>
+            <h1 className="hon_h1_title">About</h1>
             <h3>Some Subtitle</h3>
-          </Col>
-
-          <Col md={4}>
-            <div className="breadcrumbs">
-              <a href="#">Home</a><a href="#">PAGES & FEATURES</a><span>About 2</span>
-            </div>
           </Col>
 
         </Row>

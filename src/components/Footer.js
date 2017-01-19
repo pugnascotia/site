@@ -1,36 +1,34 @@
 // @flow
 import React from 'react';
+import { Link } from 'react-router';
+
+import type { PostMeta } from '../blog/types';
+
+import postMeta from '../blog/collection.json';
+
+const recentPosts : PostMeta[] = postMeta.recent;
 
 const Footer = () => (
   <footer className="hon_image_bck hon_wht_txt hon_footer_fixed hon_no_shadow" style={{backgroundColor: '#999'}}>
     <div className="container">
       <div className="row">
-        <div className="col-md-3 col-sm-3">
+        <div className="col-sm-6">
           <h4>Blog</h4>
           <ul>
-            <li><a href="#">Thomsoon</a></li>
-            <li><a href="#">Free mockup</a></li>
-            <li><a href="#">No way. New UI elements</a></li>
-            <li><a href="#">Thomsoon Shop</a></li>
+            {recentPosts.map((post, index) => (
+              <li key={index}><Link to={`/blog/${post.id}`}>{post.title}</Link></li>
+            ))}
           </ul>
         </div>
-        <div className="col-md-3 col-sm-3">
-          <h4>Shop</h4>
-          <p>Please Visit Out Shop <br />
-            68 Cardamon Place, Melbourne Vic 3000<br />
-            Call us: 1.777.77.777
-          </p>
-        </div>
-        <div className="col-md-3 col-sm-3">
+        <div className="col-sm-3">
           <h4>Social</h4>
           <ul>
-            <li><a href="#">Behance</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Dribble</a></li>
+            <li><a href="https://twitter.com/pugnascotia">Twitter</a></li>
+            <li><a href="https://github.com/pugnascotia">Github</a></li>
           </ul>
         </div>
-        <div className="col-md-3 col-sm-3">
-          <h3>© Hondo 2016</h3>
+        <div className="col-sm-3">
+          <h3>© Rory Hunter {new Date().getFullYear()}</h3>
         </div>
       </div>
     </div>

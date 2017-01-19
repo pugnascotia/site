@@ -3,12 +3,12 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const Logo = ({ text }) => {
-  const letters = text.split('').map(each => {
+  const letters = text.split('').map((each, index) => {
     const min = 0;
     const max = 50;
     const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
 
-    return (<span style={{ transitionDelay: `0.${randomNumber}s` }}>{each}</span>);
+    return (<span key={index} style={{ transitionDelay: `0.${randomNumber}s` }}>{each}</span>);
   });
 
   return (
