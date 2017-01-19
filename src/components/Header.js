@@ -2,13 +2,29 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+const Logo = ({ text }) => {
+  const letters = text.split('').map(each => {
+    const min = 0;
+    const max = 50;
+    const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+
+    return (<span style={{ transitionDelay: `0.${randomNumber}s` }}>{each}</span>);
+  });
+
+  return (
+    <Link to="/" className="hon_logo hon_logo_animation">
+      {letters}
+    </Link>
+  );
+};
+
 const Header = () => (
   <header>
 
     <nav className="hon_light_nav hon_transp_nav grey_header">
       <div className="container">
 
-        <a href="/" className="hon_logo hon_logo_animation">Rory Hunter</a>
+        <Logo text="Rory Hunter" />
 
         <div className="hon_logo_und">Swiss Army Developer</div>
         <div className="hon_header_login">
