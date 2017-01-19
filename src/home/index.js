@@ -1,11 +1,15 @@
 // @flow
 import React from 'react';
 
-import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
+import Grid from 'react-bootstrap/lib/Grid';
+import Row from 'react-bootstrap/lib/Row';
 
+import Animated from '../components/Animated';
 import IconBox from '../components/IconBox';
 import Metric from '../components/Metric';
+
+import { withBackground } from '../StyleUtils';
 
 const SkillBar = ({percentage, skill}) => (
   <div className="skill-bar skill-bar-thin">
@@ -29,7 +33,9 @@ const App = () => (
   <div className="hon_material hon_middle_titles">
 
     {/* Slider */}
-    <div className="hon_slider hon_image_bck hon_fixed hon_wht_txt" data-stellar-background-ratio="0.2" style={{backgroundImage: 'url(http://placehold.it/1400x900)'}}>
+    <div className="hon_slider hon_image_bck hon_fixed hon_wht_txt"
+      {...withBackground('http://verothemes.com/hondo/images/about/sl.jpg')}
+    >
       <div className="hon_over" style={{backgroundColor: 'rgba(0,0,0,0.2)'}} data-0="opacity:0.1;" data--400-bottom="opacity:0;"></div>
 
       <div className="container">
@@ -104,11 +110,17 @@ const App = () => (
 
           <Row>
             <Col md={4}>
+              <img src="http://verothemes.com/hondo/images/about/sl.jpg" />
+              <p/>
               <h2>WHO AM I?</h2>
-              <h3>We Love what we create. Whether it's a new brand identity, advertising campaign or interactive strategy. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur magnam, quo dolor recusandae magni nostrum ipsum!</h3>
-                <p><a href="#" className="btn">Download CV</a></p>
+              <p>We Love what we create. Whether it's a new brand identity, advertising campaign or interactive strategy.
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur magnam, quo dolor recusandae magni
+                nostrum ipsum!</p>
+                <p><a href="#" className="btn">Download CV</a>
+              </p>
             </Col>
-            <div className="col-md-7 col-md-offset-1 hon_txt_gradient">
+
+            <Col md={7} mdOffset={1} className="hon_txt_gradient">
 
               {/* icon boxes */}
               <Row>
@@ -141,7 +153,7 @@ const App = () => (
 
               </Row>
               {/* icon boxes end */}
-            </div>
+            </Col>
           </Row>
 
           {/* boxes */}
@@ -167,7 +179,8 @@ const App = () => (
 
 
       {/* section */}
-      <section className="hon_section hon_section_sml_padding bg" style={{backgroundImage: 'url(http://placehold.it/1400x900)'}}>
+      <section className="hon_section hon_section_sml_padding bg"
+        {...withBackground('http://verothemes.com/hondo/images/about/slide1.jpg')}>
 
         <div className="row hon_auto_height hon_wht_txt">
 
@@ -187,7 +200,8 @@ const App = () => (
       {/* section end */}
 
       {/* section */}
-      <section className="hon_section hon_section_sml_padding hon_image_bck hon_wht_txt bg" style={{backgroundImage: 'url(http://placehold.it/1400x900)'}}>
+      <section className="hon_section hon_section_sml_padding hon_image_bck hon_wht_txt bg"
+        {...withBackground('http://verothemes.com/hondo/images/about/work.jpg')}>
 
         <div className="row hon_auto_height">
 
@@ -262,8 +276,7 @@ const App = () => (
 
 
           {/* icon boxes */}
-          <div className="hon_icon_boxes row hon_slide_gallery hon_gravity">
-
+          <Row className="hon_icon_boxes hon_slide_gallery hon_gravity">
 
             {/* item */}
             <div className="hon_portfolio_gravity">
@@ -333,7 +346,7 @@ const App = () => (
             </div>
 
 
-          </div>
+          </Row>
           {/* icon boxes end */}
 
 
@@ -342,11 +355,9 @@ const App = () => (
 
       </section>
 
-
-      {/* section */}
       <section className="hon_section hon_section_sml_padding" >
 
-        <div className="row hon_auto_height">
+        <Row className="hon_auto_height">
 
           <div className="col-md-4 hon_image_bck hon_wht_txt" style={{backgroundColor: '#999'}}>
             <div className="hon_simple_block hon_middle_title">
@@ -355,44 +366,37 @@ const App = () => (
             </div>
           </div>
 
-          <div className="col-md-4 hidden-sm hon_image_bck hon_fixed"  data-stellar-background-ratio="0.2" style={{backgroundImage: 'url(http://placehold.it/1400x900)'}}>
+          <div className="col-md-4 hidden-sm hon_image_bck hon_fixed"  data-stellar-background-ratio="0.2"
+               style={{backgroundImage: 'url(http://verothemes.com/hondo/images/about/sl_2.jpg)'}}>
 
           </div>
           <div className="col-md-4 hon_image_bck hon_wht_txt" style={{backgroundColor: '#999'}}>
             <div className="hon_simple_block">
 
-              {/* animation */}
-              <div data-animation="animation_blocks" data-bottom="@class:noactive" data--100-bottom="@class:active">
+              <Animated>
                 <SkillBar skill="WEB DESIGN" percentage={80} />
                 <SkillBar skill="HTML / CSS" percentage={90} />
                 <SkillBar skill="WORDPRESS" percentage={85} />
                 <SkillBar skill="SEO" percentage={75} />
-              </div>
-              {/* animation end */}
+              </Animated>
 
             </div>
           </div>
-        </div>
-
+        </Row>
 
       </section>
-      {/* section end */}
 
-
-
-      {/* section */}
       <section className="hon_section hon_image_bck" style={{backgroundColor: '#fff'}}>
-        <div className="container text-center">
+        <Grid className="text-center">
 
           <h2>My Education</h2>
-          <h3>We are a company of promise and possibilities. Each day represents a fresh oppurtunity to share Our Vision. Joining strategy with creative is what we do best as our goal is to create tools that engage your audience and entice them to act.</h3>
+          <h3>We are a company of promise and possibilities. Each day represents a fresh oppurtunity to share Our Vision.
+           Joining strategy with creative is what we do best as our goal is to create tools that engage your audience
+           and entice them to act.</h3>
 
+          <Row className="hon_icon_boxes">
 
-          {/* icon boxes */}
-          <div className="hon_icon_boxes row">
-
-            {/* animation */}
-            <div data-animation="animation_blocks" data-bottom="@class:noactive" data--100-bottom="@class:active">
+            <Animated>
 
               <Education institution="AUSTRIAN STATE COLLEGE" outcome="GRADE A+">
                 <ul>
@@ -421,15 +425,12 @@ const App = () => (
                 </ul>
               </Education>
 
-            </div>
-            {/* anmation end */}
+            </Animated>
 
-          </div>
+          </Row>
           {/* icon boxes end */}
 
-
-        </div>
-        {/* container end */}
+        </Grid>
 
       </section>
 

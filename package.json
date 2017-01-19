@@ -61,7 +61,7 @@
     "yaml-front-matter": "^3.4.0"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "yarn run blog && node scripts/start.js",
     "blog": "node scripts/buildBlogInventory.js > src/blog/collection.json",
     "build": "yarn run flow && yarn run blog && node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",

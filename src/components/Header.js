@@ -24,7 +24,7 @@ const Header = () => (
     <nav className="hon_light_nav hon_transp_nav grey_header">
       <div className="container">
 
-        <Logo text="Rory Hunter" />
+        <Logo text="pugnascotia" />
 
         <div className="hon_logo_und">Swiss Army Developer</div>
         <div className="hon_header_login">

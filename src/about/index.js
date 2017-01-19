@@ -5,22 +5,12 @@ import Col from 'react-bootstrap/lib/Col';
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 
+import Animated from '../components/Animated';
 import IconBox from '../components/IconBox';
 import Overlay from '../components/Overlay';
 import Statistic from '../components/Statistic';
 
-const Animated = ({ children }) => (
-  <div data-animation="animation_blocks" data-bottom="@class:noactive" data--100-bottom="@class:active">
-    {children}
-  </div>
-);
-
-const withBackground = (image) => ({
-  'data-stellar-background-ratio': '0.2',
-  style: {
-    backgroundImage: `url(${image})`
-  }
-});
+import { withBackground } from '../StyleUtils';
 
 const Testimonials = (props) => (
   <section className="hon_section">
