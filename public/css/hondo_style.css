@@ -1601,7 +1601,6 @@ label.error{
     z-index: 2;
 }
 .hon_footer_fixed {
-    width: 90%;
     position: fixed;
     bottom: 0;
     padding-left: 50px;
@@ -1609,7 +1608,7 @@ label.error{
     z-index: -1;
     height: 390px;
 }
-.hon_page_margin.hon_page_fixed {
+.hon_page_fixed_footer {
     margin-bottom: 390px;
     min-height: initial;
     height: initial;

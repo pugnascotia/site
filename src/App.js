@@ -20,7 +20,7 @@ const App = () => (
 
       <SocialIcons />
 
-      <div className="hon_page hon_page_fixed">
+      <div className="hon_page hon_page_fixed_footer hon_page_fixed">
 
         <a className="hon_top ti ti-angle-up hon_go" onClick={() => window.scrollTo(0,0) }/>
 

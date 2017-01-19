@@ -22,6 +22,85 @@ const withBackground = (image) => ({
   }
 });
 
+const Testimonials = (props) => (
+  <section className="hon_section">
+    <Grid className="text-center">
+
+      <h2>Testimonials</h2>
+      <h3>I Always Have Something to Show You</h3>
+
+      {/* boxes  */}
+      <div className="hon_icon_boxes hon_team_slider owl-carousel owl-theme">
+
+        {/* item  */}
+        <div className="hon_news_block text-center">
+              <span className="hon_news_img">
+                <img src="http://placehold.it/600x400" alt=""/>
+              </span>
+          <span className="hon_news_title">Really great work</span>
+          <span className="hon_news_author">Lawrence Stephens | Comedian</span>
+          <p>Vero is always a pleasure to work with.I know I can get  support when I need…</p>
+        </div>
+
+        {/* item  */}
+        <div className="hon_news_block text-center">
+              <span className="hon_news_img">
+                <img src="http://placehold.it/600x400" alt=""/>
+              </span>
+          <span className="hon_news_title">Impressive support</span>
+          <span className="hon_news_author">Carolyn Moreno | Judge</span>
+          <p>Vero is extremely responsive to support requests and goes out of his way to resolve issues</p>
+        </div>
+
+        {/* item  */}
+        <div className="hon_news_block text-center">
+                        <span className="hon_news_img">
+                            <img src="http://placehold.it/600x400" alt=""/>
+                        </span>
+          <span className="hon_news_title">Great design</span>
+          <span className="hon_news_author">Donald Green | IT consultant</span>
+          <p>Awesome to work with. Incredibly organized, easy to communicate with, beautiful work</p>
+        </div>
+
+        {/* item  */}
+        <div className="hon_news_block text-center">
+                        <span className="hon_news_img">
+                            <img src="http://placehold.it/600x400" alt=""/>
+                        </span>
+          <span className="hon_news_title">Really great work</span>
+          <span className="hon_news_author">Lawrence Stephens | Comedian</span>
+          <p>Vero is always a pleasure to work with.I know I can get  support when I need…</p>
+        </div>
+
+        {/* item  */}
+        <div className="hon_news_block text-center">
+                        <span className="hon_news_img">
+                            <img src="http://placehold.it/600x400" alt=""/>
+                        </span>
+          <span className="hon_news_title">Impressive support</span>
+          <span className="hon_news_author">Carolyn Moreno | Judge</span>
+          <p>Vero is extremely responsive to support requests and goes out of his way to resolve issues</p>
+        </div>
+
+        {/* item  */}
+        <div className="hon_news_block text-center">
+                        <span className="hon_news_img">
+                            <img src="http://placehold.it/600x400" alt=""/>
+                        </span>
+          <span className="hon_news_title">Great design</span>
+          <span className="hon_news_author">Donald Green | IT consultant</span>
+          <p>Awesome to work with. Incredibly organized, easy to communicate with, beautiful work</p>
+        </div>
+
+
+      </div>
+      {/* boxes end  */}
+
+
+    </Grid>
+  </section>
+);
+
 const About = () => (
   <div>
     {/* PAGE TITLE SMALL  */}
@@ -101,7 +180,6 @@ const About = () => (
 
       </section>
 
-
       {/* Statistics  */}
       <section className="hon_section hon_section_sml_padding hon_image_bck text-center hon_wht_txt hon_fixed"
         {...withBackground('http://verothemes.com/hondo/images/corporate3/shutterstock_303925577.jpg')}>
@@ -121,82 +199,7 @@ const About = () => (
         </Grid>
       </section>
 
-      <section className="hon_section">
-        <Grid className="text-center">
-
-          <h2>Testimonials</h2>
-          <h3>I Always Have Something to Show You</h3>
-
-          {/* boxes  */}
-          <div className="hon_icon_boxes hon_team_slider">
-
-            {/* item  */}
-            <div className="hon_news_block text-center">
-              <span className="hon_news_img">
-                <img src="http://placehold.it/600x400" alt=""/>
-              </span>
-              <span className="hon_news_title">Really great work</span>
-              <span className="hon_news_author">Lawrence Stephens | Comedian</span>
-              <p>Vero is always a pleasure to work with.I know I can get  support when I need…</p>
-            </div>
-
-            {/* item  */}
-            <div className="hon_news_block text-center">
-              <span className="hon_news_img">
-                <img src="http://placehold.it/600x400" alt=""/>
-              </span>
-              <span className="hon_news_title">Impressive support</span>
-              <span className="hon_news_author">Carolyn Moreno | Judge</span>
-              <p>Vero is extremely responsive to support requests and goes out of his way to resolve issues</p>
-            </div>
-
-            {/* item  */}
-            <div className="hon_news_block text-center">
-                        <span className="hon_news_img">
-                            <img src="http://placehold.it/600x400" alt=""/>
-                        </span>
-              <span className="hon_news_title">Great design</span>
-              <span className="hon_news_author">Donald Green | IT consultant</span>
-              <p>Awesome to work with. Incredibly organized, easy to communicate with, beautiful work</p>
-            </div>
-
-            {/* item  */}
-            <div className="hon_news_block text-center">
-                        <span className="hon_news_img">
-                            <img src="http://placehold.it/600x400" alt=""/>
-                        </span>
-              <span className="hon_news_title">Really great work</span>
-              <span className="hon_news_author">Lawrence Stephens | Comedian</span>
-              <p>Vero is always a pleasure to work with.I know I can get  support when I need…</p>
-            </div>
-
-            {/* item  */}
-            <div className="hon_news_block text-center">
-                        <span className="hon_news_img">
-                            <img src="http://placehold.it/600x400" alt=""/>
-                        </span>
-              <span className="hon_news_title">Impressive support</span>
-              <span className="hon_news_author">Carolyn Moreno | Judge</span>
-              <p>Vero is extremely responsive to support requests and goes out of his way to resolve issues</p>
-            </div>
-
-            {/* item  */}
-            <div className="hon_news_block text-center">
-                        <span className="hon_news_img">
-                            <img src="http://placehold.it/600x400" alt=""/>
-                        </span>
-              <span className="hon_news_title">Great design</span>
-              <span className="hon_news_author">Donald Green | IT consultant</span>
-              <p>Awesome to work with. Incredibly organized, easy to communicate with, beautiful work</p>
-            </div>
-
-
-          </div>
-          {/* boxes end  */}
-
-
-        </Grid>
-      </section>
+      {/*<Testimonials />*/}
     </section>
   </div>
 );
