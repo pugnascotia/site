@@ -23,7 +23,7 @@ const Header = ({ title, subTitle, hero }: Props) => (
          backgroundAttachment: 'fixed'
        }}>
 
-    <Overlay opacity={0.8} />
+    <Overlay />
 
     <Grid bsClass="container text-left">
       <Row>
