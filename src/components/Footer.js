@@ -2,11 +2,11 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import type { PostMeta } from '../blog/types';
+import type { RecentPostType } from '../blog/types';
 
 import postMeta from '../blog/collection.json';
 
-const recentPosts : PostMeta[] = postMeta.recent;
+const recentPosts : RecentPostType[] = postMeta.recent;
 
 const Footer = () => (
   <footer className="hon_image_bck hon_wht_txt hon_footer_fixed hon_no_shadow" style={{backgroundColor: '#999'}}>
