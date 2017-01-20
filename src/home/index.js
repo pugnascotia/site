@@ -11,8 +11,8 @@ import Metric from '../components/Metric';
 
 import { withBackground } from '../StyleUtils';
 
-const SkillBar = ({percentage, skill}) => (
-  <div className="skill-bar skill-bar-thin">
+const SkillBar = ({percentage, skill, delay = '0s'}) => (
+  <div className="skill-bar skill-bar-thin" style={{ transitionDelay: delay }}>
     <div className="skill-bar-content" data-percentage={percentage} style={{width: `${percentage}%`}}></div>
     <span className="skill-title">{skill}</span><span className="skill-perc">{percentage}%</span>
   </div>
@@ -125,51 +125,44 @@ const App = () => (
               {/* icon boxes */}
               <Row>
 
-                {/* animation */}
-                <div data-animation="animation_blocks" data-bottom="@class:noactive" data--100-bottom="@class:active">
+                <Animated>
 
-                <IconBox icon="package">
-                  <h4><b>100+</b> page templates</h4>
-                  Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
-                </IconBox>
+                  <IconBox icon="package">
+                    <h4><b>100+</b> page templates</h4>
+                    Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                  </IconBox>
 
-                <IconBox icon="ruler-pencil">
-                  <h4><b>Great</b> Design</h4>
-                  Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
-                </IconBox>
+                  <IconBox icon="ruler-pencil">
+                    <h4><b>Great</b> Design</h4>
+                    Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                  </IconBox>
 
-                <IconBox icon="panel">
-                  <h4><b>Consepts</b> Marketing</h4>
-                  Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
-                </IconBox>
+                  <IconBox icon="panel">
+                    <h4><b>Consepts</b> Marketing</h4>
+                    Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                  </IconBox>
 
-                <IconBox icon="bag">
-                  <h4><b>One/Multi</b> Development</h4>
-                  Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
-                </IconBox>
+                  <IconBox icon="bag">
+                    <h4><b>One/Multi</b> Development</h4>
+                    Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                  </IconBox>
 
-                </div>
-                {/* anmation end */}
+                </Animated>
 
               </Row>
               {/* icon boxes end */}
             </Col>
           </Row>
 
-          {/* boxes */}
-          <Row className="hon_icon_boxes">
+          <Row className="hon_icon_boxes text-center">
 
-            {/* animation */}
-            <div data-animation="animation_blocks" data-bottom="@class:noactive" data--100-bottom="@class:active">
+            <Animated>
               <Metric name="Happy Clients" value={820} />
               <Metric name="Project Completed" value={1200} />
               <Metric name="Cups of Coffee" value={390} />
               <Metric name="Award Winning" value={188} />
-            </div>
-            {/* animation end */}
+            </Animated>
           </Row>
-          {/* boxes end */}
-
 
         </div>
         {/* container end */}
@@ -211,48 +204,44 @@ const App = () => (
               {/* boxes */}
               <div className="row">
 
-                {/* animation */}
-                <div data-animation="animation_blocks" data-bottom="@class:noactive" data--100-bottom="@class:active">
+                <Animated>
 
-
-                  {/* item */}
-                <div className="hon_icon_box col-md-6 col-sm-6">
-                  <i className="ti ti-target"/>
-                  <div className="hon_icon_box_content">
-                    <h4><b>Mission</b> Vision</h4>
-                    Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                  <div className="hon_icon_box col-md-6 col-sm-6">
+                    <i className="ti ti-target"/>
+                    <div className="hon_icon_box_content">
+                      <h4><b>Mission</b> Vision</h4>
+                      Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                    </div>
                   </div>
-                </div>
 
-                  {/* item */}
-                <div className="hon_icon_box col-md-6 col-sm-6">
-                  <i className="ti ti-tablet"/>
-                  <div className="hon_icon_box_content">
-                    <h4><b>Vision</b> 2020</h4>
-                    Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                    {/* item */}
+                  <div className="hon_icon_box col-md-6 col-sm-6">
+                    <i className="ti ti-tablet"/>
+                    <div className="hon_icon_box_content">
+                      <h4><b>Vision</b> 2020</h4>
+                      Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                    </div>
                   </div>
-                </div>
 
-                  {/* item */}
-                <div className="hon_icon_box col-md-6 col-sm-6">
-                  <i className="ti ti-paint-bucket"/>
-                  <div className="hon_icon_box_content">
-                    <h4><b>Settings</b> Service</h4>
-                    Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                    {/* item */}
+                  <div className="hon_icon_box col-md-6 col-sm-6">
+                    <i className="ti ti-paint-bucket"/>
+                    <div className="hon_icon_box_content">
+                      <h4><b>Settings</b> Service</h4>
+                      Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                    </div>
                   </div>
-                </div>
 
-                  {/* item */}
-                <div className="hon_icon_box col-md-6 col-sm-6">
-                  <i className="ti ti-heart"/>
-                  <div className="hon_icon_box_content">
-                    <h4><b>Applications</b> crafting </h4>
-                    Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                    {/* item */}
+                  <div className="hon_icon_box col-md-6 col-sm-6">
+                    <i className="ti ti-heart"/>
+                    <div className="hon_icon_box_content">
+                      <h4><b>Applications</b> crafting </h4>
+                      Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                    </div>
                   </div>
-                </div>
 
-                </div>
-                {/* anmation end */}
+                </Animated>
 
               </div>
               {/* boxes end */}

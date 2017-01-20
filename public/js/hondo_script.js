@@ -397,16 +397,6 @@
 		e.preventDefault();
 	});
 
-	/*Animation Block Delay*/
-
-	$('div[data-animation=animation_blocks]').each(function(){
-		var i = 0;
-		$(this).find('.hon_icon_box, .skill-bar-content, .hon_anim_box').each(function(){
-			$(this).css('transition-delay','0.'+i+'s');
-			i++;
-		})
-	})
-
 	/*Increase-Decrease*/
 	$('.increase-qty').on("click", function(e){
 		var qtya = $(this).parents('.add-to-cart').find('.qty').val();
