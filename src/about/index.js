@@ -93,37 +93,31 @@ const Testimonials = (props) => (
 
 const About = () => (
   <div>
-    {/* PAGE TITLE SMALL  */}
     <div className="hon_page_title hon_page_title_great hon_image_bck hon_fixed hon_wht_txt"
       {...withBackground('http://verothemes.com/hondo/images/about/sl.jpg')}>
 
       <Overlay r={0} g={0} b={0} opacity={0.4} />
 
-      <div className="container text-left">
+      <Grid className="text-left">
         <Row>
-
           <Col md={8}>
             <h1 className="hon_h1_title">About</h1>
-            <h3>Some Subtitle</h3>
+            <h3>Tea-fuelled chainsaw juggler</h3>
           </Col>
-
         </Row>
-      </div>
+      </Grid>
     </div>
 
     <section id="hon_content" className="hon_content">
 
       <section id="services" className="hon_section">
-        <Grid className="text-center">
+        <Grid className="text-center hon_middle_titles">
 
           <h2>My Skills</h2>
-          <h3>We Love what we create. Whether it's a new brand identity, advertising campaign or interactive strategy.</h3>
+          <h3>From the front-end to the back-end...and beyond!</h3>
 
-
-            {/* icon boxes  */}
             <Row className="hon_icon_boxes">
 
-              {/* animation  */}
               <Animated>
 
                 <IconBox icon="package" md={4}>
@@ -164,11 +158,10 @@ const About = () => (
 
       </section>
 
-      {/* Statistics  */}
       <section className="hon_section hon_section_sml_padding hon_image_bck text-center hon_wht_txt hon_fixed"
         {...withBackground('http://verothemes.com/hondo/images/corporate3/shutterstock_303925577.jpg')}>
 
-        <div className="hon_over" style={{backgroundColor: 'rgba(41, 41, 41, 0.9)'}}></div>
+        <Overlay r={41} g={41} b={41} opacity={0.9} />
 
         <Grid>
           <Row className="hon_icon_boxes">
