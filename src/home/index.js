@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/lib/Col';
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 
+import { Parallax, Background } from 'react-parallax';
+
 import Animated from '../components/Animated';
 import IconBox from '../components/IconBox';
 import Metric from '../components/Metric';
@@ -172,206 +174,203 @@ const App = () => (
 
 
       {/* section */}
-      <section className="hon_section hon_section_sml_padding bg"
-        {...withBackground('http://verothemes.com/hondo/images/about/slide1.jpg')}>
+      <section className="hon_section hon_section_sml_padding">
+        <Parallax strength={300} bgImage="http://verothemes.com/hondo/images/about/slide1.jpg">
+          <div className="row hon_auto_height hon_wht_txt">
 
-        <div className="row hon_auto_height hon_wht_txt">
+            <div className="col-md-6 hon_image_bck" style={{backgroundColor: '#999'}}>
+              <div className="hon_simple_block">
+                <h2>Welcome to Marko World</h2>
+                <h3>HOW CAN I HELP YOU</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas alias reiciendis aperiam maiores excepturi quia minima, perferendis recusandae, ipsum non harum autem, explicabo suscipit ipsa dignissimos adipisci nulla, animi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas alias reiciendis aperiam maiores excepturi quia minima, perferendis recusandae, ipsum non harum autem, explicabo suscipit ipsa dignissimos adipisci nulla, animi.</p>
 
-          <div className="col-md-6 hon_image_bck" style={{backgroundColor: '#999'}}>
-            <div className="hon_simple_block">
-              <h2>Welcome to Marko World</h2>
-              <h3>HOW CAN I HELP YOU</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas alias reiciendis aperiam maiores excepturi quia minima, perferendis recusandae, ipsum non harum autem, explicabo suscipit ipsa dignissimos adipisci nulla, animi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quas alias reiciendis aperiam maiores excepturi quia minima, perferendis recusandae, ipsum non harum autem, explicabo suscipit ipsa dignissimos adipisci nulla, animi.</p>
-
-              <p><a href="#" className="btn">Read More</a></p>
+                <p><a href="#" className="btn">Read More</a></p>
+              </div>
             </div>
           </div>
-        </div>
-
+        </Parallax>
 
       </section>
       {/* section end */}
 
       {/* section */}
-      <section className="hon_section hon_section_sml_padding hon_image_bck hon_wht_txt bg"
-        {...withBackground('http://verothemes.com/hondo/images/about/work.jpg')}>
+      <section className="hon_section hon_section_sml_padding hon_image_bck hon_wht_txt">
+        <Parallax strength={300} bgImage="http://verothemes.com/hondo/images/about/work.jpg">
+          <div className="row hon_auto_height">
 
-        <div className="row hon_auto_height">
+            <div className="col-md-6 col-md-offset-6 hon_image_bck" style={{backgroundColor: '#999'}}>
+              <div className="hon_simple_block">
 
-          <div className="col-md-6 col-md-offset-6 hon_image_bck" style={{backgroundColor: '#999'}}>
-            <div className="hon_simple_block">
+                {/* boxes */}
+                <div className="row">
 
-              {/* boxes */}
-              <div className="row">
+                  <Animated>
+
+                    <div className="hon_icon_box col-md-6 col-sm-6">
+                      <i className="ti ti-target"/>
+                      <div className="hon_icon_box_content">
+                        <h4><b>Mission</b> Vision</h4>
+                        Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                      </div>
+                    </div>
+
+                      {/* item */}
+                    <div className="hon_icon_box col-md-6 col-sm-6">
+                      <i className="ti ti-tablet"/>
+                      <div className="hon_icon_box_content">
+                        <h4><b>Vision</b> 2020</h4>
+                        Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                      </div>
+                    </div>
+
+                      {/* item */}
+                    <div className="hon_icon_box col-md-6 col-sm-6">
+                      <i className="ti ti-paint-bucket"/>
+                      <div className="hon_icon_box_content">
+                        <h4><b>Settings</b> Service</h4>
+                        Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                      </div>
+                    </div>
+
+                      {/* item */}
+                    <div className="hon_icon_box col-md-6 col-sm-6">
+                      <i className="ti ti-heart"/>
+                      <div className="hon_icon_box_content">
+                        <h4><b>Applications</b> crafting </h4>
+                        Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                      </div>
+                    </div>
+
+                  </Animated>
+
+                </div>
+                {/* boxes end */}
+              </div>
+            </div>
+          </div>
+        </Parallax>
+      </section>
+      {/* section end */}
+
+
+      {/*/!* section *!/*/}
+      {/*<section className="hon_section hon_image_bck" style={{backgroundColor: '#fff'}}>*/}
+        {/*<div className="container text-center">*/}
+
+          {/*<h2>My Works</h2>*/}
+          {/*<h3>We are a company of promise and possibilities. Each day represents a fresh oppurtunity to share Our Vision.*/}
+           {/*Joining strategy with creative is what we do best as our goal is to create tools that engage*/}
+            {/*your audience and entice them to act.</h3>*/}
+
+
+          {/*/!* icon boxes *!/*/}
+          {/*<Row className="hon_icon_boxes hon_slide_gallery hon_gravity">*/}
+
+            {/*/!* item *!/*/}
+            {/*<div className="hon_portfolio_gravity">*/}
+
+              {/*<div className="hon_gravity_content" >*/}
+                {/*<img src="http://placehold.it/600x400" alt="" />*/}
+                {/*<div className="hon_gravity_title text-left">*/}
+                  {/*<h3>Hondo</h3>*/}
+                  {/*<span className="hon_port_subtitle">Design / Modern / Nature</span>*/}
+                  {/*<span className="hon_gravity_icons">*/}
+                    {/*<a href="http://placehold.it/600x400" className="lightbox"><i className="ti ti-plus"/></a>*/}
+                  {/*</span>*/}
+                {/*</div>*/}
+
+              {/*</div>*/}
+            {/*</div>*/}
+
+            {/*/!* item *!/*/}
+            {/*<div className="hon_portfolio_gravity">*/}
+
+              {/*<div className="hon_gravity_content">*/}
+                {/*<img src="http://placehold.it/600x400" alt="" />*/}
+                {/*<div className="hon_gravity_title text-left">*/}
+                  {/*<h3>Business</h3>*/}
+                  {/*<span className="hon_port_subtitle">Design / Modern / Nature</span>*/}
+                  {/*<span className="hon_gravity_icons">*/}
+                    {/*<a href="http://placehold.it/600x400" className="lightbox"><i className="ti ti-plus"/></a>*/}
+                  {/*</span>*/}
+                {/*</div>*/}
+
+              {/*</div>*/}
+            {/*</div>*/}
+
+
+            {/*/!* item *!/*/}
+            {/*<div className="hon_portfolio_gravity">*/}
+
+              {/*<div className="hon_gravity_content">*/}
+                {/*<img src="http://placehold.it/600x400" alt="" />*/}
+                {/*<div className="hon_gravity_title text-left">*/}
+                  {/*<h3>World</h3>*/}
+                  {/*<span className="hon_port_subtitle">Design / Modern / Nature</span>*/}
+                  {/*<span className="hon_gravity_icons">*/}
+                    {/*<a href="http://placehold.it/600x400" className="lightbox"><i className="ti ti-plus"/></a>*/}
+                  {/*</span>*/}
+                {/*</div>*/}
+
+
+              {/*</div>*/}
+            {/*</div>*/}
+
+            {/*/!* item *!/*/}
+            {/*<div className="hon_portfolio_gravity">*/}
+
+              {/*<div className="hon_gravity_content">*/}
+
+                {/*<img src="http://placehold.it/600x400" alt="" />*/}
+                {/*<div className="hon_gravity_title text-left">*/}
+                  {/*<h3>Welcome to Hondo</h3>*/}
+                  {/*<span className="hon_port_subtitle">Design / Modern / Nature</span>*/}
+                  {/*<span className="hon_gravity_icons">*/}
+                    {/*<a href="http://placehold.it/600x400" className="lightbox"><i className="ti ti-plus"/></a>*/}
+                  {/*</span>*/}
+                {/*</div>*/}
+
+              {/*</div>*/}
+            {/*</div>*/}
+
+
+          {/*</Row>*/}
+          {/*/!* icon boxes end *!/*/}
+
+
+        {/*</div>*/}
+        {/*/!* container end *!/*/}
+
+      {/*</section>*/}
+
+      <section className="hon_section hon_section_sml_padding" >
+        <Parallax bgImage="http://verothemes.com/hondo/images/about/sl_2.jpg" strength={300}>
+          <Row className="hon_auto_height" style={{ display: 'flex' }}>
+
+            <div className="col-md-4 hon_image_bck hon_wht_txt" style={{backgroundColor: '#999', display: 'flex'}}>
+              <div className="hon_simple_block hon_middle_title">
+                <h3>Marko will help to market your startup</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus fugiat voluptates adipisci beatae eos! Eveniet rem nam dolore iusto quas. Consectetur perferendis, nobis rerum quos rem libero ea temporibus doloribus.</p>
+              </div>
+            </div>
+
+            <div className="col-md-4 hidden-sm" />
+
+            <div className="col-md-4 hon_image_bck hon_wht_txt"
+                 style={{backgroundColor: '#999', display: 'flex' }}>
+              <div className="hon_simple_block" style={{ width: '100%' }}>
 
                 <Animated>
-
-                  <div className="hon_icon_box col-md-6 col-sm-6">
-                    <i className="ti ti-target"/>
-                    <div className="hon_icon_box_content">
-                      <h4><b>Mission</b> Vision</h4>
-                      Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
-                    </div>
-                  </div>
-
-                    {/* item */}
-                  <div className="hon_icon_box col-md-6 col-sm-6">
-                    <i className="ti ti-tablet"/>
-                    <div className="hon_icon_box_content">
-                      <h4><b>Vision</b> 2020</h4>
-                      Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
-                    </div>
-                  </div>
-
-                    {/* item */}
-                  <div className="hon_icon_box col-md-6 col-sm-6">
-                    <i className="ti ti-paint-bucket"/>
-                    <div className="hon_icon_box_content">
-                      <h4><b>Settings</b> Service</h4>
-                      Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
-                    </div>
-                  </div>
-
-                    {/* item */}
-                  <div className="hon_icon_box col-md-6 col-sm-6">
-                    <i className="ti ti-heart"/>
-                    <div className="hon_icon_box_content">
-                      <h4><b>Applications</b> crafting </h4>
-                      Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
-                    </div>
-                  </div>
-
+                  <SkillBar skill="WEB DESIGN" percentage={80} />
+                  <SkillBar skill="HTML / CSS" percentage={90} />
+                  <SkillBar skill="WORDPRESS" percentage={85} />
+                  <SkillBar skill="SEO" percentage={75} />
                 </Animated>
 
               </div>
-              {/* boxes end */}
             </div>
-          </div>
-        </div>
-
-
-      </section>
-      {/* section end */}
-
-
-      {/* section */}
-      <section className="hon_section hon_image_bck" style={{backgroundColor: '#fff'}}>
-        <div className="container text-center">
-
-          <h2>My Works</h2>
-          <h3>We are a company of promise and possibilities. Each day represents a fresh oppurtunity to share Our Vision.
-           Joining strategy with creative is what we do best as our goal is to create tools that engage
-            your audience and entice them to act.</h3>
-
-
-          {/* icon boxes */}
-          <Row className="hon_icon_boxes hon_slide_gallery hon_gravity">
-
-            {/* item */}
-            <div className="hon_portfolio_gravity">
-
-              <div className="hon_gravity_content" >
-                <img src="http://placehold.it/600x400" alt="" />
-                <div className="hon_gravity_title text-left">
-                  <h3>Hondo</h3>
-                  <span className="hon_port_subtitle">Design / Modern / Nature</span>
-                  <span className="hon_gravity_icons">
-                    <a href="http://placehold.it/600x400" className="lightbox"><i className="ti ti-plus"/></a>
-                  </span>
-                </div>
-
-              </div>
-            </div>
-
-            {/* item */}
-            <div className="hon_portfolio_gravity">
-
-              <div className="hon_gravity_content">
-                <img src="http://placehold.it/600x400" alt="" />
-                <div className="hon_gravity_title text-left">
-                  <h3>Business</h3>
-                  <span className="hon_port_subtitle">Design / Modern / Nature</span>
-                  <span className="hon_gravity_icons">
-                    <a href="http://placehold.it/600x400" className="lightbox"><i className="ti ti-plus"/></a>
-                  </span>
-                </div>
-
-              </div>
-            </div>
-
-
-            {/* item */}
-            <div className="hon_portfolio_gravity">
-
-              <div className="hon_gravity_content">
-                <img src="http://placehold.it/600x400" alt="" />
-                <div className="hon_gravity_title text-left">
-                  <h3>World</h3>
-                  <span className="hon_port_subtitle">Design / Modern / Nature</span>
-                  <span className="hon_gravity_icons">
-                    <a href="http://placehold.it/600x400" className="lightbox"><i className="ti ti-plus"/></a>
-                  </span>
-                </div>
-
-
-              </div>
-            </div>
-
-            {/* item */}
-            <div className="hon_portfolio_gravity">
-
-              <div className="hon_gravity_content">
-
-                <img src="http://placehold.it/600x400" alt="" />
-                <div className="hon_gravity_title text-left">
-                  <h3>Welcome to Hondo</h3>
-                  <span className="hon_port_subtitle">Design / Modern / Nature</span>
-                  <span className="hon_gravity_icons">
-                    <a href="http://placehold.it/600x400" className="lightbox"><i className="ti ti-plus"/></a>
-                  </span>
-                </div>
-
-              </div>
-            </div>
-
-
           </Row>
-          {/* icon boxes end */}
-
-
-        </div>
-        {/* container end */}
-
-      </section>
-
-      <section className="hon_section hon_section_sml_padding" >
-
-        <Row className="hon_auto_height">
-
-          <div className="col-md-4 hon_image_bck hon_wht_txt" style={{backgroundColor: '#999'}}>
-            <div className="hon_simple_block hon_middle_title">
-              <h3>Marko will help to market your startup</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus fugiat voluptates adipisci beatae eos! Eveniet rem nam dolore iusto quas. Consectetur perferendis, nobis rerum quos rem libero ea temporibus doloribus.</p>
-            </div>
-          </div>
-
-          <div className="col-md-4 hidden-sm hon_image_bck hon_fixed"  data-stellar-background-ratio="0.2"
-               style={{backgroundImage: 'url(http://verothemes.com/hondo/images/about/sl_2.jpg)'}}>
-
-          </div>
-          <div className="col-md-4 hon_image_bck hon_wht_txt" style={{backgroundColor: '#999'}}>
-            <div className="hon_simple_block">
-
-              <Animated>
-                <SkillBar skill="WEB DESIGN" percentage={80} />
-                <SkillBar skill="HTML / CSS" percentage={90} />
-                <SkillBar skill="WORDPRESS" percentage={85} />
-                <SkillBar skill="SEO" percentage={75} />
-              </Animated>
-
-            </div>
-          </div>
-        </Row>
+        </Parallax>
 
       </section>
 
