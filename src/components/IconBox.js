@@ -14,7 +14,7 @@ type Props = {
 const IconBox = ({ icon, children, md, sm, delay = '0s' }: Props) => (
   <Col style={{ transitionDelay: delay }} md={md || 6} sm={sm || 6} className="hon_icon_box">
     <i className={`ti ti-${icon}`}/>
-    <div className="hon_icon_box_content">
+    <div className="hon_icon_box_content" style={{ fontSize: 16 }}>
       {children}
     </div>
   </Col>

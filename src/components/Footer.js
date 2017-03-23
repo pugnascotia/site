@@ -25,6 +25,7 @@ const Footer = () => (
           <ul>
             <li><a href="https://twitter.com/pugnascotia">Twitter</a></li>
             <li><a href="https://github.com/pugnascotia">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/rory-hunter">LinkedIn</a></li>
           </ul>
         </div>
         <div className="col-sm-3">

@@ -40,10 +40,10 @@ const App = () => (
     >
       <div className="hon_over" style={{backgroundColor: 'rgba(0,0,0,0.2)'}} data-0="opacity:0.1;" data--400-bottom="opacity:0;"></div>
 
-      <div className="container">
+      <Grid>
 
         {/* Slider Texts */}
-        <div className="hon_slide_txt text-left hon_txt_mt"  data-0="opacity:1;" data--200-bottom="opacity:0;">
+        <div className="hon_slide_txt text-left hon_txt_mt">
 
           {/* Large Medium TXT Devices */}
           <div className="hon_wrapper_full_sl hon_wht_txt  hidden-xs hidden-sm">
@@ -92,11 +92,11 @@ const App = () => (
           </div>
             {/* Small TXT Devices End */}
           <a href="#" className="btn btn_border">Read more</a>
-          <a href="https://themeforest.net/user/verothemes/portfolio?ref=VeroThemes" className="btn" >Hire Me</a>
+          <a href="#" className="btn" >Hire Me</a>
         </div>
         {/* Slider Texts End */}
 
-      </div>
+      </Grid>
       {/* container end */}
 
 
@@ -108,51 +108,59 @@ const App = () => (
 
       {/* section */}
       <section className="hon_section hon_image_bck" style={{backgroundColor: '#fff'}}>
-        <div className="container">
+
+        <Grid>
 
           <Row>
             <Col md={4}>
               <img src="http://verothemes.com/hondo/images/about/sl.jpg" />
               <p/>
               <h2>WHO AM I?</h2>
-              <p>We Love what we create. Whether it's a new brand identity, advertising campaign or interactive strategy.
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur magnam, quo dolor recusandae magni
-                nostrum ipsum!</p>
+              <p>
+                As an experienced full-stack engineer, I have applied my technical ability, leadership and
+               interpersonal skills in multiple sectors and a variety of roles. I have worked for high-profile
+               global companies. I love being challenged technically, developing professionally and making
+                an impact to the business.
+              </p>
                 <p><a href="#" className="btn">Download CV</a>
               </p>
             </Col>
 
             <Col md={7} mdOffset={1} className="hon_txt_gradient">
 
-              {/* icon boxes */}
-              <Row>
+              <Animated>
 
-                <Animated>
-
+                <Row>
                   <IconBox icon="package">
-                    <h4><b>100+</b> page templates</h4>
-                    Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                    <h4><b>DevOps</b>Full Stack</h4>
+                    Code doesn't exist in a vacuum. You need repeatable builds, and
+                    automated testing, deployment and system provisioning.
                   </IconBox>
 
-                  <IconBox icon="ruler-pencil">
-                    <h4><b>Great</b> Design</h4>
-                    Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                  <IconBox icon="thought">
+                    <h4><b>Agility</b> More than Agile</h4>
+                    It's a journey, not a destination.
+                    It's a journey, not a destination.
+                    It's a journey, not a destination.
+                  </IconBox>
+                </Row>
+
+                <Row>
+                  <IconBox icon="image">
+                    <h4><b>Business</b> Focus</h4>
+                    Focussed on delivering the greatest positive business impact to my customers,
+                     by understanding their business, budget and timescales
                   </IconBox>
 
-                  <IconBox icon="panel">
-                    <h4><b>Consepts</b> Marketing</h4>
-                    Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
+                  <IconBox icon="settings">
+                    <h4><b>Technical</b> Skills</h4>
+                    Always learning, always improving, always sharing. I take new languages,
+                    frameworks and technologies in my stride.
                   </IconBox>
+                </Row>
 
-                  <IconBox icon="bag">
-                    <h4><b>One/Multi</b> Development</h4>
-                    Lorem ipsum dolor sit amet, consectetur adipisicingelit, sed do
-                  </IconBox>
+              </Animated>
 
-                </Animated>
-
-              </Row>
-              {/* icon boxes end */}
             </Col>
           </Row>
 
@@ -166,7 +174,7 @@ const App = () => (
             </Animated>
           </Row>
 
-        </div>
+        </Grid>
         {/* container end */}
 
       </section>
